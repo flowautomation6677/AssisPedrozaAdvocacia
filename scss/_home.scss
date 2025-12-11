@@ -1,0 +1,558 @@
+// ===== PÁGINA HOME =====
+
+// Seção Hero
+.s-1 {
+  @include section-padding;
+  background: $hero-gradient, url('../img/hero-bg.jpg') center/cover;
+  color: $bg-white;
+  text-align: center;
+  min-height: 80vh;
+  @include flex(column, center, center);
+  position: relative;
+  
+  @include overlay(rgba(122, 9, 16, 0.8));
+  
+  .hero-content {
+    max-width: 800px;
+    z-index: 2;
+    
+    h1 {
+      color: $bg-white;
+      font-size: $font-size-5xl;
+      margin-bottom: $spacing-lg;
+      @include fade-in(0.8s, 0.2s);
+      
+      @include responsive(mobile) {
+        font-size: $font-size-4xl;
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-2xl;
+      opacity: 0.9;
+      @include fade-in(0.8s, 0.4s);
+      
+      @include responsive(mobile) {
+        font-size: $font-size-lg;
+      }
+    }
+    
+    .hero-ctas {
+      @include flex(row, center, center);
+      gap: $spacing-lg;
+      @include fade-in(0.8s, 0.6s);
+      
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+    }
+  }
+  
+  .hero-trust {
+    position: absolute;
+    bottom: $spacing-xl;
+    left: 50%;
+    transform: translateX(-50%);
+    @include flex(row, center, center);
+    gap: $spacing-xl;
+    opacity: 0.8;
+    @include fade-in(0.8s, 0.8s);
+    
+    @include responsive(mobile) {
+      flex-direction: column;
+      gap: $spacing-md;
+      font-size: $font-size-sm;
+    }
+    
+    .trust-item {
+      @include flex(row, center, center);
+      gap: $spacing-sm;
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+// Seção Áreas de Atuação
+.s-2 {
+  @include section-padding;
+  background: $bg-light;
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-4xl;
+    
+    h2 {
+      @include title-primary;
+      font-size: $font-size-4xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .areas-grid {
+    @include grid(repeat(auto-fit, minmax(350px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .area-card {
+    @include card;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 4px;
+      background: $primary-gradient;
+      transition: left $transition-slow;
+    }
+    
+    &:hover::before {
+      left: 0;
+    }
+    
+    .area-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto $spacing-lg;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-2xl;
+    }
+    
+    h3 {
+      @include title-secondary;
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      @include text-body;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .area-link {
+      @include button-secondary;
+      padding: $spacing-sm $spacing-lg;
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+// Seção Sobre Nós
+.s-3 {
+  @include section-padding;
+  
+  .row {
+    align-items: center;
+  }
+  
+  .about-content {
+    @include responsive(mobile) {
+      order: 2;
+    }
+    
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-lg;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .about-highlights {
+      margin-bottom: $spacing-xl;
+      
+      .highlight-item {
+        @include flex(row, center, flex-start);
+        gap: $spacing-md;
+        margin-bottom: $spacing-md;
+        
+        .highlight-icon {
+          width: 24px;
+          height: 24px;
+          color: $primary-color;
+          flex-shrink: 0;
+        }
+        
+        span {
+          font-weight: $font-weight-medium;
+        }
+      }
+    }
+    
+    .about-cta {
+      @include button-primary;
+    }
+  }
+  
+  .about-image {
+    text-align: center;
+    
+    @include responsive(mobile) {
+      order: 1;
+      margin-bottom: $spacing-xl;
+    }
+    
+    img {
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Seção Equipe
+.s-4 {
+  @include section-padding;
+  background: $bg-light;
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-4xl;
+    
+    h2 {
+      @include title-primary;
+      font-size: $font-size-4xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  .team-grid {
+    @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .team-card {
+    @include card;
+    text-align: center;
+    
+    .team-photo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto $spacing-lg;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid $primary-color;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    h3 {
+      @include title-secondary;
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-sm;
+    }
+    
+    .team-role {
+      color: $primary-color;
+      font-weight: $font-weight-medium;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      @include text-body;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .team-link {
+      @include button-secondary;
+      padding: $spacing-sm $spacing-lg;
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+// Seção Valores
+.s-5 {
+  @include section-padding;
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-4xl;
+    
+    h2 {
+      @include title-primary;
+      font-size: $font-size-4xl;
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  .values-grid {
+    @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .value-card {
+    text-align: center;
+    padding: $spacing-xl;
+    
+    .value-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto $spacing-lg;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-xl;
+    }
+    
+    h3 {
+      @include title-secondary;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      @include text-body;
+    }
+  }
+}
+
+// Seção Unidades e Contato
+.s-6 {
+  @include section-padding;
+  background: $bg-light;
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: $spacing-4xl;
+    
+    h2 {
+      @include title-primary;
+      font-size: $font-size-4xl;
+      margin-bottom: $spacing-md;
+    }
+  }
+  
+  .contact-grid {
+    @include grid(repeat(auto-fit, minmax(350px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .unit-card {
+    @include card;
+    
+    h3 {
+      @include title-secondary;
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-lg;
+      text-align: center;
+    }
+    
+    .unit-info {
+      margin-bottom: $spacing-lg;
+      
+      .info-item {
+        @include flex(row, flex-start, flex-start);
+        gap: $spacing-md;
+        margin-bottom: $spacing-md;
+        
+        .info-icon {
+          width: 20px;
+          height: 20px;
+          color: $primary-color;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+        
+        span {
+          @include text-body;
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    .unit-cta {
+      @include button-whatsapp;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+// Seção Formulário
+.s-7 {
+  @include section-padding;
+  
+  .row {
+    align-items: center;
+  }
+  
+  .form-content {
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-lg;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-xl;
+    }
+  }
+  
+  .contact-form {
+    background: $bg-white;
+    padding: $spacing-2xl;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-lg;
+    
+    .form-group {
+      margin-bottom: $spacing-lg;
+      
+      label {
+        display: block;
+        font-weight: $font-weight-medium;
+        margin-bottom: $spacing-sm;
+        color: $text-dark;
+      }
+      
+      input,
+      textarea,
+      select {
+        @include input-base;
+      }
+      
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+    }
+    
+    .form-checkbox {
+      @include flex(row, flex-start, flex-start);
+      gap: $spacing-sm;
+      margin-bottom: $spacing-lg;
+      
+      input[type="checkbox"] {
+        margin-top: 2px;
+      }
+      
+      label {
+        margin-bottom: 0;
+        font-size: $font-size-sm;
+        line-height: 1.4;
+      }
+    }
+    
+    .form-submit {
+      @include button-primary;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+// Botão flutuante WhatsApp
+.whatsapp-float {
+  position: fixed;
+  bottom: $spacing-xl;
+  right: $spacing-xl;
+  width: 60px;
+  height: 60px;
+  background: $whatsapp-green;
+  border-radius: 50%;
+  @include flex(column, center, center);
+  color: $bg-white;
+  font-size: $font-size-xl;
+  box-shadow: $shadow-lg;
+  z-index: $z-fixed;
+  transition: all $transition-normal;
+  animation: pulse 2s infinite;
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: $shadow-xl;
+  }
+  
+  @include responsive(mobile) {
+    bottom: $spacing-lg;
+    right: $spacing-lg;
+    width: 50px;
+    height: 50px;
+    font-size: $font-size-lg;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+// Animações de scroll
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  
+  &.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Efeitos de hover para cards
+.hover-effect {
+  transition: all $transition-normal;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-xl;
+  }
+}

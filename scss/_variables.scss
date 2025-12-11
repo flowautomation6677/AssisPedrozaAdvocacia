@@ -1,0 +1,84 @@
+// ===== VARIÁVEIS GLOBAIS =====
+// Cores da Identidade Visual
+$primary-color: rgb(122, 9, 16);        // Vinho/Bordô principal
+$secondary-color: rgb(227, 27, 41);     // Vermelho secundário
+$text-dark: rgb(39, 38, 38);            // Cinza escuro para textos
+$text-black: rgb(0, 0, 0);              // Preto
+$bg-white: rgb(255, 255, 255);          // Branco
+$bg-light: rgb(252, 252, 252);          // Branco muito claro
+$bg-gray-light: rgb(243, 243, 243);     // Cinza muito claro
+$bg-gray: rgb(236, 236, 236);           // Cinza claro
+$whatsapp-green: rgb(37, 211, 102);     // Verde WhatsApp
+$link-blue: rgb(47, 90, 174);           // Azul para links
+
+// Gradientes
+$primary-gradient: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+$hero-gradient: linear-gradient(135deg, rgba(122, 9, 16, 0.9) 0%, rgba(227, 27, 41, 0.8) 100%);
+
+// Tipografia
+$font-primary: 'Montserrat', sans-serif;    // Títulos
+$font-secondary: 'Open Sans', sans-serif;   // Corpo de texto
+
+// Tamanhos de fonte (rem)
+$font-size-xs: 0.75rem;     // 12px
+$font-size-sm: 0.875rem;    // 14px
+$font-size-base: 1rem;      // 16px
+$font-size-lg: 1.125rem;    // 18px
+$font-size-xl: 1.25rem;     // 20px
+$font-size-2xl: 1.5rem;     // 24px
+$font-size-3xl: 1.875rem;   // 30px
+$font-size-4xl: 2.25rem;    // 36px
+$font-size-5xl: 3rem;       // 48px
+
+// Pesos de fonte
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Espaçamentos
+$spacing-xs: 0.25rem;    // 4px
+$spacing-sm: 0.5rem;     // 8px
+$spacing-md: 1rem;       // 16px
+$spacing-lg: 1.5rem;     // 24px
+$spacing-xl: 2rem;       // 32px
+$spacing-2xl: 3rem;      // 48px
+$spacing-3xl: 4rem;      // 64px
+$spacing-4xl: 6rem;      // 96px
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$large: 1200px;
+$xlarge: 1440px;
+
+// Container
+$container-max-width: 1200px;
+$container-padding: 1rem;
+
+// Bordas e sombras
+$border-radius-sm: 0.25rem;
+$border-radius-md: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-xl: 1.5rem;
+
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Transições
+$transition-fast: 0.15s ease-in-out;
+$transition-normal: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;
+
+// Z-index
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;

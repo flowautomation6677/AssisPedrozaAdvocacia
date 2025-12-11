@@ -1,0 +1,1435 @@
+// ===== ESTILOS PARA PÁGINAS INTERNAS =====
+
+// Hero interno
+.hero-interno {
+  @include section-padding;
+  background: $primary-gradient;
+  color: $bg-white;
+  text-align: center;
+  min-height: 40vh;
+  @include flex(column, center, center);
+  
+  .hero-content {
+    max-width: 600px;
+    
+    h1 {
+      color: $bg-white;
+      font-size: $font-size-4xl;
+      margin-bottom: $spacing-md;
+      @include fade-in(0.6s, 0.2s);
+      
+      @include responsive(mobile) {
+        font-size: $font-size-3xl;
+      }
+    }
+    
+    p {
+      font-size: $font-size-lg;
+      opacity: 0.9;
+      @include fade-in(0.6s, 0.4s);
+      
+      @include responsive(mobile) {
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+
+// ===== PÁGINA SOBRE =====
+
+.sobre-historia {
+  @include section-padding;
+  
+  .historia-content {
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-lg;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-lg;
+    }
+  }
+  
+  .historia-image {
+    text-align: center;
+    
+    img {
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.mvv-section {
+  @include section-padding;
+  background: $bg-light;
+  
+  .mvv-grid {
+    @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .mvv-card {
+    @include card;
+    text-align: center;
+    
+    .mvv-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto $spacing-lg;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-2xl;
+    }
+    
+    h3 {
+      @include title-secondary;
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    p, ul {
+      @include text-body;
+    }
+    
+    ul {
+      text-align: left;
+      
+      li {
+        margin-bottom: $spacing-sm;
+        
+        strong {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.diferenciais-section {
+  @include section-padding;
+  
+  .diferenciais-grid {
+    @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .diferencial-item {
+    @include flex(row, flex-start, flex-start);
+    gap: $spacing-lg;
+    padding: $spacing-lg;
+    
+    .diferencial-icon {
+      width: 60px;
+      height: 60px;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-xl;
+      flex-shrink: 0;
+    }
+    
+    h4 {
+      @include title-secondary;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-sm;
+    }
+    
+    p {
+      @include text-body;
+    }
+  }
+}
+
+.numeros-section {
+  @include section-padding;
+  background: $bg-light;
+  
+  .numeros-grid {
+    @include grid(repeat(auto-fit, minmax(200px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-lg;
+    }
+  }
+  
+  .numero-item {
+    text-align: center;
+    
+    .numero-valor {
+      font-size: $font-size-5xl;
+      font-weight: $font-weight-bold;
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+      
+      .numero-simbolo {
+        font-size: $font-size-3xl;
+      }
+    }
+    
+    h4 {
+      @include title-secondary;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-sm;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+.etica-section {
+  @include section-padding;
+  
+  .etica-content {
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-lg;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .etica-pilares {
+      margin: $spacing-xl 0;
+      
+      .pilar-item {
+        @include flex(row, flex-start, flex-start);
+        gap: $spacing-md;
+        margin-bottom: $spacing-lg;
+        
+        i {
+          color: $primary-color;
+          font-size: $font-size-xl;
+          margin-top: $spacing-xs;
+        }
+        
+        h4 {
+          @include title-secondary;
+          font-size: $font-size-lg;
+          margin-bottom: $spacing-sm;
+        }
+        
+        p {
+          @include text-body;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  .etica-image {
+    text-align: center;
+    
+    img {
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.cta-sobre {
+  @include section-padding;
+  background: $primary-gradient;
+  color: $bg-white;
+  text-align: center;
+  
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    h2 {
+      color: $bg-white;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-xl;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      @include flex(row, center, center);
+      gap: $spacing-lg;
+      
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+    }
+  }
+}
+
+// ===== PÁGINA ÁREAS DE ATUAÇÃO =====
+
+.area-detalhada {
+  @include section-padding;
+  
+  &.bg-light {
+    background: $bg-light;
+  }
+  
+  .area-content {
+    .area-icon-large {
+      width: 100px;
+      height: 100px;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-lg;
+    }
+    
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    .area-subtitle {
+      font-size: $font-size-lg;
+      color: $secondary-color;
+      font-weight: $font-weight-medium;
+      margin-bottom: $spacing-xl;
+    }
+    
+    .servicos-lista {
+      margin: $spacing-xl 0;
+      
+      h4 {
+        @include title-secondary;
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-md;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+          @include flex(row, center, flex-start);
+          gap: $spacing-md;
+          margin-bottom: $spacing-sm;
+          
+          i {
+            color: $primary-color;
+            font-size: $font-size-sm;
+          }
+        }
+      }
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+    }
+  }
+  
+  .area-image {
+    text-align: center;
+    
+    img {
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.faq-areas {
+  @include section-padding;
+  background: $bg-light;
+  
+  .faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    .faq-item {
+      background: $bg-white;
+      border-radius: $border-radius-md;
+      margin-bottom: $spacing-md;
+      overflow: hidden;
+      box-shadow: $shadow-sm;
+      
+      .faq-question {
+        padding: $spacing-lg;
+        @include flex(row, center, space-between);
+        cursor: pointer;
+        transition: background-color $transition-normal;
+        
+        &:hover {
+          background: $bg-light;
+        }
+        
+        h4 {
+          margin: 0;
+          font-size: $font-size-lg;
+          color: $text-dark;
+        }
+        
+        i {
+          color: $primary-color;
+          transition: transform $transition-normal;
+        }
+      }
+      
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height $transition-normal;
+        
+        p {
+          padding: 0 $spacing-lg $spacing-lg;
+          margin: 0;
+          @include text-body;
+        }
+      }
+      
+      &.active {
+        .faq-question i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+.cta-areas {
+  @include section-padding;
+  background: $primary-gradient;
+  color: $bg-white;
+  text-align: center;
+  
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    h2 {
+      color: $bg-white;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-xl;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      @include flex(row, center, center);
+      gap: $spacing-lg;
+      
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+      
+      .btn-whatsapp {
+        @include button-whatsapp;
+      }
+    }
+  }
+}
+
+// ===== PÁGINA EQUIPE =====
+
+.equipe-intro {
+  @include section-padding;
+  text-align: center;
+  
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-lg;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+.membro-equipe {
+  @include section-padding;
+  
+  &.bg-light {
+    background: $bg-light;
+  }
+  
+  .membro-foto {
+    text-align: center;
+    
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-lg;
+    }
+  }
+  
+  .membro-info {
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-sm;
+    }
+    
+    .membro-cargo {
+      font-size: $font-size-lg;
+      color: $secondary-color;
+      font-weight: $font-weight-medium;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .membro-resumo {
+      margin-bottom: $spacing-xl;
+      
+      p {
+        @include text-body;
+        font-size: $font-size-lg;
+      }
+    }
+    
+    .membro-experiencia,
+    .membro-especializacoes,
+    .membro-formacao {
+      margin-bottom: $spacing-xl;
+      
+      h4 {
+        @include title-secondary;
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-md;
+      }
+      
+      p {
+        @include text-body;
+        margin-bottom: $spacing-md;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+          @include flex(row, center, flex-start);
+          gap: $spacing-md;
+          margin-bottom: $spacing-sm;
+          
+          i {
+            color: $primary-color;
+            font-size: $font-size-sm;
+          }
+        }
+      }
+    }
+    
+    .especializacoes-tags {
+      @include flex(row, center, flex-start, wrap);
+      gap: $spacing-sm;
+      
+      .tag {
+        background: $primary-color;
+        color: $bg-white;
+        padding: $spacing-xs $spacing-md;
+        border-radius: $border-radius-xl;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+}
+
+.valores-equipe {
+  @include section-padding;
+  background: $bg-light;
+  
+  .valores-grid {
+    @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .valor-item {
+    text-align: center;
+    padding: $spacing-xl;
+    
+    .valor-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto $spacing-lg;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-xl;
+    }
+    
+    h4 {
+      @include title-secondary;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      @include text-body;
+    }
+  }
+}
+
+.depoimentos-equipe {
+  @include section-padding;
+  
+  .depoimentos-grid {
+    @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .depoimento-card {
+    @include card;
+    
+    .depoimento-texto {
+      margin-bottom: $spacing-lg;
+      
+      p {
+        @include text-body;
+        font-style: italic;
+        font-size: $font-size-lg;
+        margin-bottom: 0;
+      }
+    }
+    
+    .depoimento-autor {
+      strong {
+        display: block;
+        color: $primary-color;
+        font-weight: $font-weight-semibold;
+        margin-bottom: $spacing-xs;
+      }
+      
+      span {
+        color: $text-dark;
+        font-size: $font-size-sm;
+      }
+    }
+  }
+}
+
+.cta-equipe {
+  @include section-padding;
+  background: $primary-gradient;
+  color: $bg-white;
+  text-align: center;
+  
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    h2 {
+      color: $bg-white;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-xl;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      @include flex(row, center, center);
+      gap: $spacing-lg;
+      
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+      
+      .btn-whatsapp {
+        @include button-whatsapp;
+      }
+    }
+  }
+}
+
+// ===== PÁGINA CONTATO =====
+
+.contato-info {
+  @include section-padding;
+  
+  .contato-grid {
+    @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .contato-card {
+    @include card;
+    text-align: center;
+    
+    .contato-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto $spacing-lg;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-2xl;
+    }
+    
+    h3 {
+      @include title-secondary;
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-sm;
+    }
+    
+    p {
+      @include text-body;
+      margin-bottom: $spacing-md;
+    }
+    
+    .contato-link {
+      color: $primary-color;
+      font-weight: $font-weight-semibold;
+      font-size: $font-size-lg;
+      text-decoration: none;
+      
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    
+    .horario-info {
+      strong {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.formulario-contato {
+  @include section-padding;
+  background: $bg-light;
+  
+  .formulario-info {
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-lg;
+    }
+    
+    p {
+      @include text-body;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-xl;
+    }
+    
+    .info-destaque {
+      margin-bottom: $spacing-xl;
+      
+      .destaque-item {
+        @include flex(row, flex-start, flex-start);
+        gap: $spacing-md;
+        margin-bottom: $spacing-lg;
+        
+        i {
+          color: $primary-color;
+          font-size: $font-size-xl;
+          margin-top: $spacing-xs;
+        }
+        
+        h4 {
+          @include title-secondary;
+          font-size: $font-size-lg;
+          margin-bottom: $spacing-sm;
+        }
+        
+        p {
+          @include text-body;
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    .contato-direto {
+      h4 {
+        @include title-secondary;
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-md;
+      }
+      
+      .btn-whatsapp-grande {
+        @include flex(row, center, flex-start);
+        gap: $spacing-md;
+        background: $whatsapp-green;
+        color: $bg-white;
+        padding: $spacing-lg;
+        border-radius: $border-radius-md;
+        text-decoration: none;
+        transition: all $transition-normal;
+        
+        &:hover {
+          background: darken($whatsapp-green, 10%);
+          transform: translateY(-2px);
+          box-shadow: $shadow-lg;
+        }
+        
+        i {
+          font-size: $font-size-2xl;
+        }
+        
+        div {
+          strong {
+            display: block;
+            font-size: $font-size-lg;
+          }
+          
+          span {
+            font-size: $font-size-sm;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+  
+  .contact-form {
+    background: $bg-white;
+    padding: $spacing-2xl;
+    border-radius: $border-radius-lg;
+    box-shadow: $shadow-lg;
+    
+    h3 {
+      @include title-secondary;
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-xl;
+      text-align: center;
+    }
+    
+    .form-row {
+      @include flex(row, stretch, space-between);
+      gap: $spacing-md;
+      
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: 0;
+      }
+      
+      .form-group {
+        flex: 1;
+      }
+    }
+    
+    .form-info {
+      text-align: center;
+      margin-top: $spacing-md;
+      
+      small {
+        color: $text-dark;
+        font-size: $font-size-sm;
+        
+        i {
+          color: $primary-color;
+          margin-right: $spacing-xs;
+        }
+      }
+    }
+  }
+}
+
+.nossas-unidades {
+  @include section-padding;
+  
+  .unidades-grid {
+    @include grid(repeat(auto-fit, minmax(400px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .unidade-card {
+    @include card;
+    
+    .unidade-header {
+      @include flex(row, center, space-between);
+      margin-bottom: $spacing-lg;
+      
+      h3 {
+        @include title-secondary;
+        font-size: $font-size-xl;
+        margin-bottom: 0;
+      }
+      
+      .unidade-badge {
+        background: $primary-color;
+        color: $bg-white;
+        padding: $spacing-xs $spacing-md;
+        border-radius: $border-radius-xl;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+      }
+    }
+    
+    .unidade-info {
+      margin-bottom: $spacing-xl;
+      
+      .info-item {
+        @include flex(row, flex-start, flex-start);
+        gap: $spacing-md;
+        margin-bottom: $spacing-lg;
+        
+        i {
+          color: $primary-color;
+          font-size: $font-size-lg;
+          margin-top: $spacing-xs;
+          flex-shrink: 0;
+        }
+        
+        div {
+          strong {
+            color: $primary-color;
+            display: block;
+            margin-bottom: $spacing-xs;
+          }
+        }
+      }
+    }
+    
+    .unidade-acoes {
+      @include flex(row, center, space-between);
+      gap: $spacing-md;
+      
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: $spacing-sm;
+      }
+      
+      .btn-whatsapp {
+        @include button-whatsapp;
+        flex: 1;
+        justify-content: center;
+      }
+      
+      .btn-secondary {
+        @include button-secondary;
+        flex: 1;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.faq-contato {
+  @include section-padding;
+  background: $bg-light;
+  
+  .faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    .faq-item {
+      background: $bg-white;
+      border-radius: $border-radius-md;
+      margin-bottom: $spacing-md;
+      overflow: hidden;
+      box-shadow: $shadow-sm;
+      
+      .faq-question {
+        padding: $spacing-lg;
+        @include flex(row, center, space-between);
+        cursor: pointer;
+        transition: background-color $transition-normal;
+        
+        &:hover {
+          background: $bg-light;
+        }
+        
+        h4 {
+          margin: 0;
+          font-size: $font-size-lg;
+          color: $text-dark;
+        }
+        
+        i {
+          color: $primary-color;
+          transition: transform $transition-normal;
+        }
+      }
+      
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height $transition-normal;
+        
+        p {
+          padding: 0 $spacing-lg $spacing-lg;
+          margin: 0;
+          @include text-body;
+        }
+      }
+      
+      &.active {
+        .faq-question i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+// ===== PÁGINA LOCALIZAÇÃO =====
+
+.unidade-detalhada {
+  @include section-padding;
+  
+  &.bg-light {
+    background: $bg-light;
+  }
+  
+  .unidade-info {
+    .unidade-badge {
+      background: $primary-color;
+      color: $bg-white;
+      padding: $spacing-xs $spacing-md;
+      border-radius: $border-radius-xl;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+      margin-bottom: $spacing-md;
+      display: inline-block;
+    }
+    
+    h2 {
+      @include title-primary;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    .unidade-descricao {
+      @include text-body;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-xl;
+    }
+    
+    .endereco-completo,
+    .horario-funcionamento,
+    .contato-unidade {
+      margin-bottom: $spacing-xl;
+      
+      h4 {
+        @include title-secondary;
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-md;
+        @include flex(row, center, flex-start);
+        gap: $spacing-sm;
+        
+        i {
+          color: $primary-color;
+        }
+      }
+      
+      address {
+        @include text-body;
+        font-style: normal;
+        line-height: 1.6;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+          @include text-body;
+          margin-bottom: $spacing-sm;
+        }
+      }
+      
+      p {
+        @include text-body;
+        margin-bottom: $spacing-sm;
+        
+        strong {
+          color: $primary-color;
+        }
+      }
+    }
+    
+    .acoes-unidade {
+      @include flex(row, center, flex-start);
+      gap: $spacing-lg;
+      
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+    }
+  }
+  
+  .mapa-container {
+    margin-bottom: $spacing-lg;
+    
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: $border-radius-lg;
+      box-shadow: $shadow-md;
+    }
+  }
+  
+  .pontos-referencia {
+    h4 {
+      @include title-secondary;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-md;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        @include flex(row, center, flex-start);
+        gap: $spacing-md;
+        margin-bottom: $spacing-sm;
+        @include text-body;
+        
+        i {
+          color: $primary-color;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+}
+
+.como-chegar {
+  @include section-padding;
+  
+  .transporte-grid {
+    @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .transporte-card {
+    @include card;
+    text-align: center;
+    
+    .transporte-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto $spacing-lg;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-2xl;
+    }
+    
+    h3 {
+      @include title-secondary;
+      font-size: $font-size-xl;
+      margin-bottom: $spacing-lg;
+    }
+    
+    .transporte-info {
+      text-align: left;
+      
+      h4 {
+        @include title-secondary;
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-sm;
+        margin-top: $spacing-lg;
+        
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      
+      p {
+        @include text-body;
+        margin-bottom: $spacing-md;
+      }
+    }
+  }
+}
+
+.info-adicionais {
+  @include section-padding;
+  background: $bg-light;
+  
+  .info-grid {
+    @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .info-card {
+    @include card;
+    text-align: center;
+    
+    .info-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto $spacing-lg;
+      background: $primary-gradient;
+      border-radius: 50%;
+      @include flex(column, center, center);
+      color: $bg-white;
+      font-size: $font-size-xl;
+    }
+    
+    h4 {
+      @include title-secondary;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      @include text-body;
+    }
+  }
+}
+
+.cta-agendamento {
+  @include section-padding;
+  background: $primary-gradient;
+  color: $bg-white;
+  text-align: center;
+  
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    
+    h2 {
+      color: $bg-white;
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-xl;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons {
+      @include flex(row, center, center);
+      gap: $spacing-lg;
+      
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+    }
+  }
+}
+
+// ===== FOOTER =====
+
+.footer {
+  background: $text-dark;
+  color: $bg-white;
+  @include section-padding;
+  
+  .footer-content {
+    @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
+    margin-bottom: $spacing-xl;
+    
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+  
+  .footer-section {
+    h4 {
+      color: $bg-white;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-md;
+    }
+    
+    p {
+      color: rgba($bg-white, 0.8);
+      margin-bottom: $spacing-md;
+      line-height: 1.6;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: $spacing-sm;
+        
+        a {
+          color: rgba($bg-white, 0.8);
+          text-decoration: none;
+          transition: color $transition-normal;
+          
+          &:hover {
+            color: $bg-white;
+          }
+        }
+      }
+    }
+    
+    .footer-logo {
+      margin-bottom: $spacing-md;
+      
+      img {
+        height: 50px;
+        width: auto;
+      }
+    }
+    
+    .footer-social {
+      @include flex(row, center, flex-start);
+      gap: $spacing-md;
+      
+      a {
+        width: 40px;
+        height: 40px;
+        background: rgba($bg-white, 0.1);
+        border-radius: 50%;
+        @include flex(column, center, center);
+        color: $bg-white;
+        text-decoration: none;
+        transition: all $transition-normal;
+        
+        &:hover {
+          background: $primary-color;
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba($bg-white, 0.1);
+    padding-top: $spacing-lg;
+    @include flex(row, center, space-between);
+    
+    @include responsive(mobile) {
+      flex-direction: column;
+      gap: $spacing-md;
+      text-align: center;
+    }
+    
+    p {
+      color: rgba($bg-white, 0.6);
+      margin: 0;
+      font-size: $font-size-sm;
+    }
+    
+    .footer-links {
+      a {
+        color: rgba($bg-white, 0.6);
+        text-decoration: none;
+        font-size: $font-size-sm;
+        transition: color $transition-normal;
+        
+        &:hover {
+          color: $bg-white;
+        }
+      }
+    }
+  }
+}
+
+// ===== BOTÕES GLOBAIS =====
+
+.btn-primary {
+  @include button-primary;
+}
+
+.btn-secondary {
+  @include button-secondary;
+}
+
+.btn-whatsapp {
+  @include button-whatsapp;
+}
+
+// ===== SEÇÃO HEADER GLOBAL =====
+
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-4xl;
+  
+  h2 {
+    @include title-primary;
+    font-size: $font-size-4xl;
+    margin-bottom: $spacing-md;
+    
+    @include responsive(mobile) {
+      font-size: $font-size-3xl;
+    }
+  }
+  
+  p {
+    @include text-body;
+    font-size: $font-size-lg;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    @include responsive(mobile) {
+      font-size: $font-size-base;
+    }
+  }
+}

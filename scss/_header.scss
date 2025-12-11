@@ -1,0 +1,249 @@
+// ===== HEADER =====
+
+// Topbar
+.topbar {
+  background: $primary-color;
+  color: $bg-white;
+  padding: $spacing-sm 0;
+  font-size: $font-size-sm;
+  
+  .container {
+    @include flex(row, center, space-between);
+  }
+  
+  .topbar-info {
+    @include flex(row, center, flex-start);
+    gap: $spacing-lg;
+    
+    @include responsive(mobile) {
+      gap: $spacing-md;
+      font-size: $font-size-xs;
+    }
+  }
+  
+  .topbar-contact {
+    @include flex(row, center, flex-end);
+    gap: $spacing-md;
+    
+    a {
+      color: $bg-white;
+      transition: opacity $transition-normal;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+}
+
+// Header principal
+.header {
+  background: $bg-white;
+  box-shadow: $shadow-md;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-fixed;
+  transition: all $transition-normal;
+  
+  &.scrolled {
+    box-shadow: $shadow-lg;
+    
+    .topbar {
+      display: none;
+    }
+  }
+  
+  .container {
+    @include flex(row, center, space-between);
+    padding-top: $spacing-md;
+    padding-bottom: $spacing-md;
+  }
+  
+  .logo {
+    @include flex(row, center, flex-start);
+    
+    img {
+      height: 50px;
+      width: auto;
+      
+      @include responsive(mobile) {
+        height: 40px;
+      }
+    }
+  }
+  
+  .nav {
+    @include flex(row, center, center);
+    gap: $spacing-xl;
+    
+    @include responsive(mobile) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100vh;
+      background: $bg-white;
+      flex-direction: column;
+      justify-content: center;
+      gap: $spacing-2xl;
+      transition: left $transition-normal;
+      z-index: $z-modal;
+      
+      &.active {
+        left: 0;
+      }
+    }
+    
+    .nav-link {
+      font-family: $font-primary;
+      font-weight: $font-weight-medium;
+      font-size: $font-size-base;
+      color: $text-dark;
+      text-decoration: none;
+      position: relative;
+      transition: color $transition-normal;
+      
+      &:hover,
+      &.active {
+        color: $primary-color;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $primary-gradient;
+        transition: width $transition-normal;
+      }
+      
+      &:hover::after,
+      &.active::after {
+        width: 100%;
+      }
+      
+      @include responsive(mobile) {
+        font-size: $font-size-xl;
+      }
+    }
+  }
+  
+  .header-cta {
+    @include button-primary;
+    font-size: $font-size-sm;
+    padding: $spacing-sm $spacing-lg;
+    
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+  
+  // Menu hamburguer
+  .menu-toggle {
+    display: none;
+    @include flex(column, center, center);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: $z-modal + 1;
+    
+    @include responsive(mobile) {
+      display: flex;
+    }
+    
+    .hamburger {
+      width: 25px;
+      height: 3px;
+      background: $primary-color;
+      transition: all $transition-normal;
+      position: relative;
+      
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background: $primary-color;
+        transition: all $transition-normal;
+      }
+      
+      &::before {
+        top: -8px;
+      }
+      
+      &::after {
+        bottom: -8px;
+      }
+    }
+    
+    &.active {
+      .hamburger {
+        background: transparent;
+        
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+        
+        &::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  
+  // Overlay do menu mobile
+  .nav-overlay {
+    display: none;
+    
+    @include responsive(mobile) {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: all $transition-normal;
+      z-index: $z-modal - 1;
+      
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+// Espaçamento para compensar header fixo
+body {
+  padding-top: 120px; // Altura aproximada do header com topbar
+  
+  @include responsive(mobile) {
+    padding-top: 80px;
+  }
+}
+
+// Animação de entrada do header
+.header {
+  transform: translateY(-100%);
+  animation: slideDown 0.5s ease-out forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
+}

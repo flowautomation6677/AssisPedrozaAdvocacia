@@ -1,0 +1,20 @@
+IMAGENS NECESSÁRIAS PARA O SITE:
+
+1. diego-assis-ferreira.jpg - Foto profissional do Dr. Diego
+2. matheus-pedroza.jpg - Foto profissional do Dr. Matheus  
+3. juan-pereira.jpg - Foto profissional do Dr. Juan
+4. escritorio-volta-redonda.jpg - Foto do escritório de Volta Redonda
+5. escritorio-belford-roxo.jpg - Foto do escritório de Belford Roxo
+6. equipe-reuniao.jpg - Foto da equipe em reunião
+7. consultoria-juridica.jpg - Imagem representativa de consultoria
+8. direito-empresarial.jpg - Imagem para área empresarial
+9. direito-previdenciario.jpg - Imagem para área previdenciária
+10. direito-consumidor.jpg - Imagem para direito do consumidor
+
+DIMENSÕES RECOMENDADAS:
+- Fotos da equipe: 400x400px (quadradas)
+- Fotos dos escritórios: 800x600px
+- Imagens das áreas: 600x400px
+- Imagens de hero/banner: 1920x1080px
+
+FORMATO: JPG ou WebP para melhor performance

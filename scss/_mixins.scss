@@ -1,0 +1,248 @@
+// ===== MIXINS REUTILIZÁVEIS =====
+
+// Flexbox
+@mixin flex($direction: row, $align: center, $justify: center, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
+
+// Grid
+@mixin grid($columns: 1fr, $gap: $spacing-md, $rows: auto) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+// Responsividade
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: #{$mobile - 1px}) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media (min-width: $large) {
+      @content;
+    }
+  }
+  @if $breakpoint == xlarge {
+    @media (min-width: $xlarge) {
+      @content;
+    }
+  }
+}
+
+// Botões
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-md $spacing-xl;
+  border: none;
+  border-radius: $border-radius-md;
+  font-family: $font-primary;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all $transition-normal;
+  white-space: nowrap;
+  
+  &:focus {
+    outline: 2px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background: $primary-gradient;
+  color: $bg-white;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background: transparent;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  
+  &:hover {
+    background: $primary-color;
+    color: $bg-white;
+  }
+}
+
+@mixin button-whatsapp {
+  @include button-base;
+  background: $whatsapp-green;
+  color: $bg-white;
+  
+  &:hover {
+    background: darken($whatsapp-green, 10%);
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Cards
+@mixin card {
+  background: $bg-white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+  padding: $spacing-xl;
+  transition: all $transition-normal;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+// Seções
+@mixin section-padding {
+  padding: $spacing-4xl 0;
+  
+  @include responsive(mobile) {
+    padding: $spacing-3xl 0;
+  }
+}
+
+// Títulos
+@mixin title-primary {
+  font-family: $font-primary;
+  font-weight: $font-weight-bold;
+  color: $primary-color;
+  line-height: 1.2;
+  margin-bottom: $spacing-lg;
+}
+
+@mixin title-secondary {
+  font-family: $font-primary;
+  font-weight: $font-weight-semibold;
+  color: $text-dark;
+  line-height: 1.3;
+  margin-bottom: $spacing-md;
+}
+
+// Texto
+@mixin text-body {
+  font-family: $font-secondary;
+  font-weight: $font-weight-normal;
+  color: $text-dark;
+  line-height: 1.6;
+  margin-bottom: $spacing-md;
+}
+
+// Animações
+@mixin fade-in($duration: $transition-normal, $delay: 0s) {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp $duration ease-out $delay forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin slide-in-left($duration: $transition-slow, $delay: 0s) {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft $duration ease-out $delay forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@mixin slide-in-right($duration: $transition-slow, $delay: 0s) {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight $duration ease-out $delay forwards;
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Hover effects
+@mixin hover-lift {
+  transition: transform $transition-normal, box-shadow $transition-normal;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Formulários
+@mixin input-base {
+  width: 100%;
+  padding: $spacing-md;
+  border: 2px solid $bg-gray;
+  border-radius: $border-radius-md;
+  font-family: $font-secondary;
+  font-size: $font-size-base;
+  transition: border-color $transition-normal;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+  
+  &::placeholder {
+    color: lighten($text-dark, 30%);
+  }
+}
+
+// Overlay
+@mixin overlay($color: rgba(0, 0, 0, 0.5)) {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color;
+    z-index: 1;
+  }
+  
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}

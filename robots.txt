@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Bloquear arquivos de desenvolvimento
+Disallow: /scss/
+Disallow: /*.scss$
+Disallow: /README.md
+Disallow: /.htaccess
+
+# Permitir arquivos importantes
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+# Sitemap
+Sitemap: https://www.assisepedroza.com.br/sitemap.xml
+
+# Crawl-delay para bots
+Crawl-delay: 1
