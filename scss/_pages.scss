@@ -73,10 +73,11 @@
   .mvv-grid {
     @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
     
-    @include responsive(mobile) {
-      grid-template-columns: 1fr;
-      gap: $spacing-lg;
-    }
+// Aplica layout de coluna para tablet e mobile (max-width: 767px)
+  @media (max-width: #{$tablet - 1px}) {
+    grid-template-columns: 1fr;
+    gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
+  }
   }
   
   .mvv-card {
@@ -124,9 +125,10 @@
   .diferenciais-grid {
     @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
     
-    @include responsive(mobile) {
+    // Aplica layout de coluna para tablet e mobile (max-width: 767px)
+    @media (max-width: #{$tablet - 1px}) {
       grid-template-columns: 1fr;
-      gap: $spacing-lg;
+      gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
     }
   }
   
@@ -582,9 +584,10 @@
   .valores-grid {
     @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
     
-    @include responsive(mobile) {
+    // Aplica layout de coluna para tablet e mobile (max-width: 767px)
+    @media (max-width: #{$tablet - 1px}) {
       grid-template-columns: 1fr;
-      gap: $spacing-lg;
+      gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
     }
   }
   
@@ -621,9 +624,10 @@
   .depoimentos-grid {
     @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
     
-    @include responsive(mobile) {
+    // Aplica layout de coluna para tablet e mobile (max-width: 767px)
+    @media (max-width: #{$tablet - 1px}) {
       grid-template-columns: 1fr;
-      gap: $spacing-lg;
+      gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
     }
   }
   
@@ -680,13 +684,15 @@
     }
     
     .cta-buttons {
-      @include flex(row, center, center);
-      gap: $spacing-lg;
-      
-      @include responsive(mobile) {
-        flex-direction: column;
-        gap: $spacing-md;
-      }
+      @inc// Para telas menores que o breakpoint de tablet (768px), muda para coluna
+    @media (max-width: #{$tablet - 1px}) {
+      flex-direction: column;
+      gap: $spacing-2xl; // Usando o espaçamento de tablet para a coluna
+    }
+    
+    @include responsive(tablet) {
+      gap: $spacing-2xl;
+    }
       
       .btn-whatsapp {
         @include button-whatsapp;
@@ -703,9 +709,10 @@
   .contato-grid {
     @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
     
-    @include responsive(mobile) {
+    // Aplica layout de coluna para tablet e mobile (max-width: 767px)
+    @media (max-width: #{$tablet - 1px}) {
       grid-template-columns: 1fr;
-      gap: $spacing-lg;
+      gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
     }
   }
   
@@ -890,9 +897,10 @@
   .unidades-grid {
     @include grid(repeat(auto-fit, minmax(400px, 1fr)), $spacing-xl);
     
-    @include responsive(mobile) {
+    // Aplica layout de coluna para tablet e mobile (max-width: 767px)
+    @media (max-width: #{$tablet - 1px}) {
       grid-template-columns: 1fr;
-      gap: $spacing-lg;
+      gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
     }
   }
   
@@ -1157,9 +1165,10 @@
   .transporte-grid {
     @include grid(repeat(auto-fit, minmax(300px, 1fr)), $spacing-xl);
     
-    @include responsive(mobile) {
+    // Aplica layout de coluna para tablet e mobile (max-width: 767px)
+    @media (max-width: #{$tablet - 1px}) {
       grid-template-columns: 1fr;
-      gap: $spacing-lg;
+      gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
     }
   }
   
@@ -1213,9 +1222,10 @@
   .info-grid {
     @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
     
-    @include responsive(mobile) {
+    // Aplica layout de coluna para tablet e mobile (max-width: 767px)
+    @media (max-width: #{$tablet - 1px}) {
       grid-template-columns: 1fr;
-      gap: $spacing-lg;
+      gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
     }
   }
   
@@ -1291,9 +1301,10 @@
     @include grid(repeat(auto-fit, minmax(250px, 1fr)), $spacing-xl);
     margin-bottom: $spacing-xl;
     
-    @include responsive(mobile) {
+    // Aplica layout de coluna para tablet e mobile (max-width: 767px)
+    @media (max-width: #{$tablet - 1px}) {
       grid-template-columns: 1fr;
-      gap: $spacing-lg;
+      gap: $spacing-2xl; // Aumentando o espaçamento para melhor visualização em coluna
     }
   }
   

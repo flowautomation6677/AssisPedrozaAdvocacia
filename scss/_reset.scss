@@ -8,7 +8,7 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; overflow-x: hidden;
   
   @include responsive(mobile) {
     font-size: 14px;
@@ -20,8 +20,8 @@ body {
   font-weight: $font-weight-normal;
   line-height: 1.6;
   color: $text-dark;
-  background-color: $bg-white;
-  overflow-x: hidden;
+  background-color: $bg-white; overflow-x: hidden;
+
 }
 
 // Tipografia responsiva

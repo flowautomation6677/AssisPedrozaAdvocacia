@@ -18,12 +18,12 @@
 // Grid system
 .row {
   @include flex(row, stretch, flex-start, wrap);
-  margin: 0 (-$spacing-md);
+  margin: 0;
 }
 
 .col {
   flex: 1;
-  padding: 0 $spacing-md;
+  padding: 0;
   margin-bottom: $spacing-lg;
 }
 

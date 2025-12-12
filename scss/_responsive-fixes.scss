@@ -507,8 +507,9 @@ img {
       text-align: left;
     }
     
+    // Removido grid-template-columns: repeat(4, 1fr); conforme solicitação do usuário.
     @include responsive-lg {
-      grid-template-columns: repeat(4, 1fr);
+      // grid-template-columns: repeat(4, 1fr);
     }
   }
   
