@@ -6,54 +6,54 @@
   @media (min-width: 1025px) {
     min-height: 80vh;
     padding: 6rem 0;
-    
+
     .hero-content {
       max-width: 900px;
-      
+
       h1 {
         font-size: 3.5rem;
         line-height: 1.1;
         margin-bottom: 1.5rem;
       }
-      
+
       .hero-subtitle {
         font-size: 1.25rem;
         margin-bottom: 2.5rem;
         line-height: 1.4;
       }
     }
-    
-    .hero-trust {
-      position: absolute;
-      bottom: 3rem;
-      left: 50%;
-      transform: translateX(-50%);
+
+  .hero-trust {
+      position: static; /* remove o absoluto */
+      transform: none;
+      margin-top: 2rem;
+
       display: flex;
-      flex-direction: row;
-      gap: 3rem;
-      width: auto;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap; /* agora fica responsivo */
       
-      .trust-item {
+    .trust-item {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 0.75rem;
         font-size: 0.9rem;
         white-space: nowrap;
-        
+
         i {
           font-size: 1rem;
           color: rgba(255, 255, 255, 0.8);
         }
       }
     }
-    
+
     .hero-ctas {
       display: flex;
       flex-direction: row;
       justify-content: center;
       gap: 1.5rem;
-      
+
       .btn-primary,
       .btn-secondary {
         padding: 1rem 2rem;
@@ -62,45 +62,43 @@
       }
     }
   }
-  
+
   // Tablet - layout intermediário
   @media (min-width: 769px) and (max-width: 1024px) {
     min-height: 70vh;
     padding: 4rem 0;
-    
+
     .hero-content {
       max-width: 700px;
       padding: 0 2rem;
-      
+
       h1 {
         font-size: 2.75rem;
         line-height: 1.2;
         margin-bottom: 1.25rem;
       }
-      
+
       .hero-subtitle {
         font-size: 1.125rem;
         margin-bottom: 2rem;
       }
     }
-    
+
     .hero-trust {
-      position: relative;
-      bottom: auto;
-      left: auto;
+      position: static; /* remove o absoluto */
       transform: none;
-      margin-top: 3rem;
+      margin-top: 2rem;
+
       display: flex;
-      flex-direction: row;
-      justify-content: center;
       gap: 2rem;
-      flex-wrap: wrap;
-      
+      justify-content: center;
+      flex-wrap: wrap; /* agora fica responsivo */
+
       .trust-item {
         font-size: 0.875rem;
       }
     }
-    
+
     .hero-ctas {
       flex-direction: row;
       gap: 1rem;
@@ -108,17 +106,17 @@
       justify-content: center;
     }
   }
-  
+
   // Mobile - layout vertical otimizado
   @media (max-width: 768px) {
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
     .container {
       height: 100%;
       display: flex;
@@ -127,7 +125,7 @@
       align-items: center;
       padding: 0 1rem;
     }
-    
+
     .hero-content {
       max-width: 100%;
       width: 100%;
@@ -136,7 +134,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
+
       h1 {
         font-size: 2.25rem;
         line-height: 1.2;
@@ -144,7 +142,7 @@
         text-align: center;
         padding: 0 0.5rem;
       }
-      
+
       .hero-subtitle {
         font-size: 1rem;
         margin-bottom: 2rem;
@@ -153,7 +151,7 @@
         padding: 0 0.5rem;
       }
     }
-    
+
     .hero-ctas {
       display: flex;
       flex-direction: column;
@@ -161,7 +159,7 @@
       width: 100%;
       max-width: 300px;
       margin-bottom: 2rem;
-      
+
       .btn-primary,
       .btn-secondary {
         width: 100%;
@@ -172,7 +170,7 @@
         border-radius: 8px;
       }
     }
-    
+
     .hero-trust {
       position: relative;
       bottom: auto;
@@ -185,7 +183,7 @@
       gap: 1rem;
       width: 100%;
       align-items: center;
-      
+
       .trust-item {
         display: flex;
         flex-direction: row;
@@ -194,19 +192,19 @@
         gap: 0.5rem;
         font-size: 0.8rem;
         text-align: center;
-        
+
         i {
           font-size: 0.9rem;
           flex-shrink: 0;
         }
-        
+
         span {
           text-align: center;
         }
       }
     }
   }
-  
+
   // Mobile pequeno - ajustes extras
   @media (max-width: 480px) {
     .hero-content {
@@ -214,17 +212,17 @@
         font-size: 1.875rem;
         padding: 0 0.25rem;
       }
-      
+
       .hero-subtitle {
         font-size: 0.9rem;
         padding: 0 0.25rem;
       }
     }
-    
+
     .hero-trust {
       .trust-item {
         font-size: 0.75rem;
-        
+
         i {
           font-size: 0.8rem;
         }
@@ -252,18 +250,18 @@
       background: rgb(227, 27, 41);
       color: white;
       border: 2px solid rgb(227, 27, 41);
-      
+
       &:hover {
         background: rgb(122, 9, 16);
         border-color: rgb(122, 9, 16);
       }
     }
-    
+
     .btn-secondary {
       background: transparent;
       color: white;
       border: 2px solid white;
-      
+
       &:hover {
         background: white;
         color: rgb(122, 9, 16);
