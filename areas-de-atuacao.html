@@ -21,6 +21,32 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    @media (max-width: 768px) {
+        /* Garante que o container seja uma coluna flexível */
+        #tributario .row, 
+        #consumidor .row, 
+        #previdenciario .row {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        /* Joga a Imagem (primeiro item) para BAIXO */
+        #tributario .col-6:first-child, 
+        #consumidor .col-6:first-child, 
+        #previdenciario .col-6:first-child {
+            order: 2 !important;
+            margin-top: 20px !important;
+        }
+
+        /* Joga o Conteúdo (último item) para CIMA */
+        #tributario .col-6:last-child, 
+        #consumidor .col-6:last-child, 
+        #previdenciario .col-6:last-child {
+            order: 1 !important;
+        }
+    }
+</style>
 </head>
 <body>
     <!-- Topbar -->
