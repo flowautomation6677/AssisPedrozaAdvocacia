@@ -614,6 +614,62 @@ img {
   }
 }
 
+// ===== CORREÇÃO DE ORDEM DE IMAGEM/TEXTO NO MOBILE (IMAGEM NO FINAL) =====
+
+@media (max-width: 768px) {
+    /* --- ÁREAS DE ATUAÇÃO --- */
+    #tributario .row, 
+    #consumidor .row, 
+    #previdenciario .row {
+        flex-direction: column !important;
+    }
+
+    #tributario .col-6:first-child, 
+    #consumidor .col-6:first-child, 
+    #previdenciario .col-6:first-child {
+        order: 1 !important;
+        margin-top: 20px;
+    }
+
+    #tributario .col-6:last-child, 
+    #consumidor .col-6:last-child, 
+    #previdenciario .col-6:last-child {
+        order: 2 !important;
+    }
+    
+    /* --- EQUIPE --- */
+    /* Seções que precisam de inversão (Imagem -> Conteúdo no HTML) */
+    #diego .row, 
+    #juan .row {
+        flex-direction: column !important;
+    }
+
+    #diego .col-4:first-child, 
+    #juan .col-4:first-child {
+        order: 1 !important; /* Imagem no início */
+        margin-top: 20px;
+    }
+
+    #diego .col-8:last-child, 
+    #juan .col-8:last-child {
+        order: 2 !important; /* Conteúdo no final */
+    }
+    
+    /* Seção #matheus (Conteúdo -> Imagem no HTML) */
+    #matheus .row {
+        flex-direction: column !important;
+    }
+    
+    #matheus .col-8:first-child { /* Conteúdo */
+        order: 2 !important; /* Conteúdo no final */
+    }
+    
+    #matheus .col-4:last-child { /* Imagem */
+        order: 1 !important; /* Imagem no início */
+        margin-top: 20px;
+    }
+}
+
 // ===== PERFORMANCE MOBILE =====
 
 @include responsive-sm {

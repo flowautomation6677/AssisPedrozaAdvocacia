@@ -303,6 +303,8 @@
     background: $bg-light;
   }
   
+
+  
   .area-content {
     .area-icon-large {
       width: 100px;
@@ -368,6 +370,24 @@
       box-shadow: $shadow-lg;
       max-width: 100%;
       height: auto;
+    }
+  }
+  
+  // Estilos para desktop (default)
+  .row {
+    align-items: center; // Alinha verticalmente o conteúdo
+  }
+  
+  // Margens específicas para a imagem na versão desktop
+  &#empresarial, &#imobiliario, &#idoso {
+    .area-image {
+      margin-left: 2rem;
+    }
+  }
+
+  &#tributario, &#consumidor {
+    .area-image {
+      margin-right: 2rem;
     }
   }
 }

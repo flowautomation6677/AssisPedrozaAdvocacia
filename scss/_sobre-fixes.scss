@@ -214,22 +214,36 @@
       gap: 1.5rem;
     }
     
-    .numero-item {
-      text-align: center;
-      
-      .numero {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-        display: block;
+      .numero-item {
+        color: white; // Garantir que o texto do item seja branco
+        text-align: center;
+        
+        .numero-valor {
+          color: white; // Garantir que o valor do número seja branco
+        }
+        
+        .numero {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+          display: block;
+        }
+        
+        .label {
+          color: white; // Garantir que o label seja branco
+          font-size: 0.8rem;
+          opacity: 0.9;
+          line-height: 1.3;
+        }
+        
+        h4 {
+          color: white; // Garantir que o título H4 seja branco
+        }
+        
+        p {
+          color: white; // Garantir que o parágrafo seja branco
+        }
       }
-      
-      .label {
-        font-size: 0.8rem;
-        opacity: 0.9;
-        line-height: 1.3;
-      }
-    }
   }
 }
 
