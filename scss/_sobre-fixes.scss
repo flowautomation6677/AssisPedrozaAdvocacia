@@ -196,6 +196,13 @@
   @media (max-width: 768px) {
     padding: 3rem 0;
     background: rgb(122, 9, 16);
+    color: white; // Adicionado para tornar o texto branco
+    
+    .section-header {
+      h2 {
+        color: white; // Adicionado para garantir que o título seja branco
+      }
+    }
     
     .container {
       padding: 0 1rem;
@@ -209,7 +216,6 @@
     
     .numero-item {
       text-align: center;
-      color: white;
       
       .numero {
         font-size: 2rem;

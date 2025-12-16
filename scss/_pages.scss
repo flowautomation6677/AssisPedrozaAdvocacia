@@ -244,8 +244,8 @@
     }
   }
   
-  .etica-image {
-    text-align: center;
+.etica-image {
+  margin-right: $spacing-xl;
     
     img {
       border-radius: $border-radius-lg;
@@ -281,6 +281,10 @@
     .cta-buttons {
       @include flex(row, center, center);
       gap: $spacing-lg;
+      
+      .btn-secondary-white {
+        @include button-secondary-white;
+      }
       
       @include responsive(mobile) {
         flex-direction: column;

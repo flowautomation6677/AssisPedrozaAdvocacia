@@ -246,3 +246,16 @@
     z-index: 2;
   }
 }
+
+@mixin button-secondary-white {
+  @include button-base;
+  background: $bg-white;
+  color: $primary-color;
+  border: 2px solid $bg-white;
+  
+  &:hover {
+    background: $bg-gray-light;
+    color: $primary-color;
+    border-color: $bg-gray-light;
+  }
+}
