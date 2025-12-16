@@ -446,49 +446,7 @@
     border-radius: $border-radius-lg;
     box-shadow: $shadow-lg;
     
-    .form-group {
-      margin-bottom: $spacing-lg;
-      
-      label {
-        display: block;
-        font-weight: $font-weight-medium;
-        margin-bottom: $spacing-sm;
-        color: $text-dark;
-      }
-      
-      input,
-      textarea,
-      select {
-        @include input-base;
-      }
-      
-      textarea {
-        min-height: 120px;
-        resize: vertical;
-      }
-    }
-    
-    .form-checkbox {
-      @include flex(row, flex-start, flex-start);
-      gap: $spacing-sm;
-      margin-bottom: $spacing-lg;
-      
-      input[type="checkbox"] {
-        margin-top: 2px;
-      }
-      
-      label {
-        margin-bottom: 0;
-        font-size: $font-size-sm;
-        line-height: 1.4;
-      }
-    }
-    
-    .form-submit {
-      @include button-primary;
-      width: 100%;
-      justify-content: center;
-    }
+
   }
 }
 

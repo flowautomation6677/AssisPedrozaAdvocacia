@@ -873,29 +873,131 @@
   
   .contact-form {
     background: $bg-white;
-    padding: $spacing-2xl;
-    border-radius: $border-radius-lg;
-    box-shadow: $shadow-lg;
+    padding: 4rem; // Aumentar o padding para 'respiro'
+    border-radius: 16px; // Border-radius maior
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08); // Sombra suave e difusa
     
+    @include responsive(tablet) {
+      padding: $spacing-2xl;
+    }
+
     h3 {
       @include title-secondary;
       font-size: $font-size-xl;
-      margin-bottom: $spacing-xl;
+      margin-bottom: $spacing-2xl; // Aumentar margem
       text-align: center;
     }
-    
+
+    // Estilo para Labels
+    label {
+        display: block;
+        font-weight: 600; // Peso da fonte 600
+        margin-bottom: $spacing-sm;
+        color: #444; // Cinza chumbo
+        font-size: 0.9rem; // Tamanho menor
+        text-transform: uppercase; // Caixa alta
+        letter-spacing: 0.5px; // Espaçamento entre letras
+    }
+
+    // Estilo para Textarea (já usa input-base, mas precisa de altura)
+    textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
     .form-row {
-      @include flex(row, stretch, space-between);
-      gap: $spacing-md;
-      
-      @include responsive(mobile) {
-        flex-direction: column;
-        gap: 0;
-      }
-      
-      .form-group {
-        flex: 1;
-      }
+        @include flex(row, stretch, space-between);
+        gap: $spacing-lg; // Aumentar o espaçamento entre colunas
+        margin-bottom: $spacing-lg; // Espaçamento entre linhas
+
+        @include responsive(mobile) {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-bottom: $spacing-lg; // Espaçamento entre campos
+        }
+    }
+
+    // Checkbox Customizado
+    .form-checkbox {
+        @include flex(row, flex-start, flex-start);
+        gap: $spacing-md;
+        margin-bottom: $spacing-lg;
+        cursor: pointer;
+
+        input[type="checkbox"] {
+            // Ocultar o checkbox nativo
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        label {
+            @include flex(row, flex-start, flex-start);
+            gap: $spacing-md;
+            margin-bottom: 0;
+            cursor: pointer;
+            font-weight: $font-weight-normal; // Resetar o peso da fonte para o texto
+            font-size: $font-size-base; // Resetar o tamanho da fonte para o texto
+            text-transform: none; // Resetar caixa alta
+            letter-spacing: 0;
+            color: $text-dark;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 18px;
+                height: 18px;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                background-color: #f9f9f9;
+                transition: all 0.2s ease;
+                flex-shrink: 0;
+            }
+
+            &::after {
+                content: '\f00c'; // Font Awesome check icon
+                font-family: 'Font Awesome 6 Free';
+                font-weight: 900;
+                font-size: 12px;
+                color: $bg-white;
+                position: absolute;
+                left: 4px; // Ajuste fino da posição
+                top: 4px;
+                opacity: 0;
+                transition: all 0.2s ease;
+            }
+        }
+
+        input[type="checkbox"]:checked + label::before {
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+
+        input[type="checkbox"]:checked + label::after {
+            opacity: 1;
+        }
+    }
+
+    // Botão de Envio
+    .form-submit {
+        @include button-primary;
+        width: 100%;
+        justify-content: center;
+        padding: 1.2rem 2rem; // Aumentar padding vertical
+        font-weight: 700; // Negrito
+        letter-spacing: 1px; // Espaçamento entre letras
+        margin-top: $spacing-xl;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-3px); // Efeito de subir
+            box-shadow: 0 8px 15px rgba($primary-color, 0.3);
+        }
     }
     
     .form-info {

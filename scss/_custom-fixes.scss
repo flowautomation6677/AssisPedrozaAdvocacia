@@ -1,0 +1,34 @@
+// Correções e customizações solicitadas pelo cliente
+
+// Variável para a cor vermelha principal da marca (se não estiver em _variables.scss)
+// Assumindo que $primary-color é o vermelho principal #B1121C
+// Se não estiver definido, usaremos o valor diretamente.
+
+// 1. Página Áreas de Atuação - Seção Previdenciário
+// Adicionar margin-right: 2rem na div class="area-image" na versão desktop
+// O seletor é #previdenciario .area-image
+@media (min-width: 1025px) { // Versão desktop (acima de $breakpoint-md)
+    #previdenciario .area-image {
+        margin-right: 2rem;
+    }
+}
+
+// 2. Página Localização - Seção cta-agendamento (Botão Formulário de Contato)
+// Fundo: #FFFFFF, Texto: #B1121C, Borda: #FFFFFF
+// O seletor é .cta-agendamento .btn-secondary
+.cta-agendamento .btn-secondary {
+    background-color: #FFFFFF !important;
+    color: #B1121C !important;
+    border: 1px solid #FFFFFF !important; // Adicionando borda branca para consistência
+}
+
+// 3. Página Localização - Seção Belford Roxo (Mapa)
+// Adicionar margin-right: 2rem na div class="mapa-container" na versão desktop
+// O seletor é #belford-roxo .mapa-container
+@media (min-width: 1025px) { // Versão desktop (acima de $breakpoint-md)
+    #belford-roxo .mapa-container {
+        margin-right: 2rem;
+    }
+}
+
+

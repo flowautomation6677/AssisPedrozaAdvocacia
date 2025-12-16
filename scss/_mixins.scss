@@ -209,20 +209,25 @@
 // Formulários
 @mixin input-base {
   width: 100%;
-  padding: $spacing-md;
-  border: 2px solid $bg-gray;
+  min-height: 55px; // Altura aumentada
+  padding: 0 $spacing-md; // Padding horizontal
+  background-color: #f4f6f8; // Cinza muito claro
+  border: 1px solid transparent; // Borda sutil transparente
   border-radius: $border-radius-md;
   font-family: $font-secondary;
-  font-size: $font-size-base;
-  transition: border-color $transition-normal;
+  font-size: 1rem; // Tamanho da fonte levemente maior
+  color: $text-dark; // Cor do texto escura
+  transition: all 0.3s ease; // Transição suave
   
   &:focus {
     outline: none;
-    border-color: $primary-color;
+    background-color: $bg-white; // Fundo branco puro no foco
+    border-color: $primary-color; // Borda na cor primária
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.2); // Sombra suave (glow)
   }
   
   &::placeholder {
-    color: lighten($text-dark, 30%);
+    color: #888; // Cinza chumbo para placeholder
   }
 }
 
