@@ -3,7 +3,7 @@
 // Seção Hero
 .s-1 {
   @include section-padding;
-  background: $hero-gradient, url('../img/hero-bg.jpg') center/cover;
+  background: $hero-gradient, url('../img/hero-background.jpg') center/cover;
   color: $bg-white;
   text-align: center;
   min-height: 80vh;
