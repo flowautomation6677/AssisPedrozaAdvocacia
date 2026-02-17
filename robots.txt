@@ -13,7 +13,7 @@ Allow: /js/
 Allow: /img/
 
 # Sitemap
-Sitemap: https://www.assisepedroza.com.br/sitemap.xml
+Sitemap: https://www.assisepedrozaadv.com.br/sitemap.xml
 
 # Crawl-delay para bots
 Crawl-delay: 1
