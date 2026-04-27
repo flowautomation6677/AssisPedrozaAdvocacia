@@ -1,4 +1,4 @@
-﻿@import"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap";
 
 @keyframes fadeInUp {
     to {
@@ -1127,7 +1127,8 @@ body {
 
 @media(max-width: 479px) {
     .s-3 .about-content {
-        order: 2
+        order: 2;
+        margin-bottom: 2rem
     }
 }
 
@@ -1628,6 +1629,106 @@ body {
     padding: 3rem;
     border-radius: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05)
+}
+
+.s-7 .contact-form .form-group {
+    margin-bottom: 1.5rem
+}
+
+.s-7 .contact-form .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    color: #272626
+}
+
+.s-7 .contact-form .form-group input, .s-7 .contact-form .form-group textarea, .s-7 .contact-form .form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ececec;
+    border-radius: .5rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    transition: border-color .3s ease-in-out;
+    background-color: #f9f9f9;
+}
+
+.s-7 .contact-form .form-group input:focus, .s-7 .contact-form .form-group textarea:focus, .s-7 .contact-form .form-group select:focus {
+    outline: none;
+    border-color: #7a0910;
+    background-color: #fff;
+}
+
+.s-7 .contact-form .form-group input::placeholder, .s-7 .contact-form .form-group textarea::placeholder, .s-7 .contact-form .form-group select::placeholder {
+    color: #747171
+}
+
+.s-7 .contact-form .form-group textarea {
+    min-height: 120px;
+    resize: vertical
+}
+
+.s-7 .contact-form .form-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: .5rem;
+    margin-bottom: 1.5rem
+}
+
+.s-7 .contact-form .form-checkbox input[type=checkbox] {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.s-7 .contact-form .form-checkbox label {
+    margin-bottom: 0;
+    font-size: .875rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.s-7 .contact-form .form-checkbox label a {
+    color: #7a0910;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.s-7 .contact-form .form-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    white-space: nowrap;
+    background: linear-gradient(135deg, rgb(122, 9, 16) 0%, rgb(227, 27, 41) 100%);
+    color: #fff;
+    width: 100%;
+}
+
+.s-7 .contact-form .form-submit:focus {
+    outline: 2px solid rgba(122, 9, 16, .5);
+    outline-offset: 2px
+}
+
+.s-7 .contact-form .form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05)
+}
+
+.s-7 .contact-form .form-submit:active {
+    transform: translateY(0)
 }
 
 .whatsapp-float {
@@ -2776,7 +2877,7 @@ body {
     opacity: .9
 }
 
-@inc @media (max-width: 767px) {
+@media (max-width: 767px) {
     .cta-equipe .cta-content .cta-buttons {
         flex-direction: column;
         gap: 3rem

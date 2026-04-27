@@ -168,6 +168,7 @@
   .about-content {
     @include responsive(mobile) {
       order: 2;
+      margin-bottom: $spacing-2xl;
     }
     
     h2 {

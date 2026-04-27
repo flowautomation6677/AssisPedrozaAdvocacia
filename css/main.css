@@ -1128,6 +1128,7 @@ body {
 @media (max-width: 479px) {
   .s-3 .about-content {
     order: 2;
+    margin-bottom: 2rem;
   }
 }
 
@@ -1651,6 +1652,7 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   transition: border-color 0.3s ease-in-out;
+  background-color: rgb(249, 249, 249);
 }
 
 .s-7 .contact-form .form-group input:focus,
@@ -2829,7 +2831,7 @@ body {
   opacity: 0.9;
 }
 
-@inc @media (max-width: 767px) {
+@media (max-width: 767px) {
   .cta-equipe .cta-content .cta-buttons {
     flex-direction: column;
     gap: 3rem;
