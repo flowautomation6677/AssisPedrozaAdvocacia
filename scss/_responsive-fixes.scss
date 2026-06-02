@@ -60,7 +60,7 @@ $breakpoint-xl: 1400px;
 // ===== HEADER RESPONSIVO =====
 
 .header {
-  @include responsive-sm {
+  @include responsive-md {
     padding: 0.75rem 0;
     
     .container {
