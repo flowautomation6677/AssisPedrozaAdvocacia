@@ -983,6 +983,11 @@ body {
 .s-3 .row {
   align-items: center;
 }
+@media (min-width: 1025px) {
+  .s-3 .about-content {
+    padding-right: 4rem;
+  }
+}
 @media (max-width: 479px) {
   .s-3 .about-content {
     order: 2;

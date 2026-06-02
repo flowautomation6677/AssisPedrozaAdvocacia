@@ -166,6 +166,10 @@
   }
   
   .about-content {
+    @media (min-width: 1025px) {
+      padding-right: 4rem; // Margem de respiro no desktop
+    }
+
     @include responsive(mobile) {
       order: 2;
       margin-bottom: $spacing-2xl;
