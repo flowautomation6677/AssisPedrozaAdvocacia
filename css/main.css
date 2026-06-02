@@ -1578,6 +1578,11 @@ body {
 .s-7 .row {
   align-items: center;
 }
+@media (min-width: 1025px) {
+  .s-7 .form-content {
+    padding-right: 4rem;
+  }
+}
 .s-7 .form-content h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -1599,8 +1604,157 @@ body {
 .s-7 .contact-form {
   background: rgb(255, 255, 255);
   padding: 3rem;
-  border-radius: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+@media (max-width: 479px) {
+  .s-7 .contact-form {
+    padding: 2rem 1.5rem;
+  }
+}
+.s-7 .contact-form .form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.s-7 .contact-form .form-group label {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+.s-7 .contact-form .form-group input[type=text],
+.s-7 .contact-form .form-group input[type=email],
+.s-7 .contact-form .form-group select,
+.s-7 .contact-form .form-group textarea {
+  width: 100%;
+  min-height: 55px;
+  padding: 0 1rem;
+  background-color: #f4f6f8;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: rgb(39, 38, 38);
+  transition: all 0.3s ease;
+}
+.s-7 .contact-form .form-group input[type=text]:focus,
+.s-7 .contact-form .form-group input[type=email]:focus,
+.s-7 .contact-form .form-group select:focus,
+.s-7 .contact-form .form-group textarea:focus {
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(122, 9, 16);
+  box-shadow: 0 0 0 3px rgba(122, 9, 16, 0.2);
+}
+.s-7 .contact-form .form-group input[type=text]::placeholder,
+.s-7 .contact-form .form-group input[type=email]::placeholder,
+.s-7 .contact-form .form-group select::placeholder,
+.s-7 .contact-form .form-group textarea::placeholder {
+  color: #888;
+}
+.s-7 .contact-form .form-group input[type=text],
+.s-7 .contact-form .form-group input[type=email],
+.s-7 .contact-form .form-group select,
+.s-7 .contact-form .form-group textarea {
+  width: 100%;
+}
+.s-7 .contact-form .form-group textarea {
+  min-height: 120px;
+  padding-top: 0.5rem;
+  resize: vertical;
+}
+.s-7 .contact-form .form-group select {
+  cursor: pointer;
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a0910' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  appearance: none;
+}
+.s-7 .contact-form .form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+.s-7 .contact-form .form-checkbox input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  cursor: pointer;
+  accent-color: rgb(122, 9, 16);
+}
+.s-7 .contact-form .form-checkbox label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+  color: rgb(39, 38, 38);
+  line-height: 1.4;
+  cursor: pointer;
+}
+.s-7 .contact-form .form-checkbox label a {
+  color: rgb(122, 9, 16);
+  font-weight: 600;
+  text-decoration: underline;
+}
+.s-7 .contact-form .form-checkbox label a:hover {
+  color: rgb(227, 27, 41);
+}
+.s-7 .contact-form .form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+}
+.s-7 .contact-form .form-submit:focus {
+  outline: 2px solid rgba(122, 9, 16, 0.5);
+  outline-offset: 2px;
+}
+.s-7 .contact-form .form-submit {
+  background: linear-gradient(135deg, rgb(122, 9, 16) 0%, rgb(227, 27, 41) 100%);
+  color: rgb(255, 255, 255);
+}
+.s-7 .contact-form .form-submit:hover {
+  transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.s-7 .contact-form .form-submit:active {
+  transform: translateY(0);
+}
+.s-7 .contact-form .form-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 1.1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.s-7 .contact-form .form-submit i {
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+.s-7 .contact-form .form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(122, 9, 16, 0.25);
 }
 
 .whatsapp-float {
@@ -2843,6 +2997,55 @@ body {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+.formulario-contato .contact-form input[type=text],
+.formulario-contato .contact-form input[type=email],
+.formulario-contato .contact-form input[type=tel],
+.formulario-contato .contact-form select,
+.formulario-contato .contact-form textarea {
+  width: 100%;
+  min-height: 55px;
+  padding: 0 1rem;
+  background-color: #f4f6f8;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: rgb(39, 38, 38);
+  transition: all 0.3s ease;
+}
+.formulario-contato .contact-form input[type=text]:focus,
+.formulario-contato .contact-form input[type=email]:focus,
+.formulario-contato .contact-form input[type=tel]:focus,
+.formulario-contato .contact-form select:focus,
+.formulario-contato .contact-form textarea:focus {
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(122, 9, 16);
+  box-shadow: 0 0 0 3px rgba(122, 9, 16, 0.2);
+}
+.formulario-contato .contact-form input[type=text]::placeholder,
+.formulario-contato .contact-form input[type=email]::placeholder,
+.formulario-contato .contact-form input[type=tel]::placeholder,
+.formulario-contato .contact-form select::placeholder,
+.formulario-contato .contact-form textarea::placeholder {
+  color: #888;
+}
+.formulario-contato .contact-form input[type=text],
+.formulario-contato .contact-form input[type=email],
+.formulario-contato .contact-form input[type=tel],
+.formulario-contato .contact-form select,
+.formulario-contato .contact-form textarea {
+  width: 100%;
+}
+.formulario-contato .contact-form select {
+  cursor: pointer;
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a0910' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  appearance: none;
 }
 .formulario-contato .contact-form textarea {
   min-height: 150px;

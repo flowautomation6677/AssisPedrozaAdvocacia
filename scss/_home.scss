@@ -561,6 +561,12 @@
   .row {
     align-items: center;
   }
+
+  @media (min-width: 1025px) {
+    .form-content {
+      padding-right: 4rem; // Margem de respiro no desktop
+    }
+  }
   
   .form-content {
     h2 {
@@ -578,11 +584,112 @@
   
   .contact-form {
     background: $bg-white;
-    padding: $spacing-2xl;
-    border-radius: $border-radius-lg;
-    box-shadow: $shadow-lg;
+    padding: 3rem; // Padding maior para respiro interno
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
     
+    @include responsive(mobile) {
+      padding: 2rem 1.5rem;
+    }
 
+    .form-group {
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      
+      label {
+        display: block;
+        font-family: $font-primary;
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: #444;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.5rem;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        @include input-base;
+        width: 100%;
+      }
+      
+      textarea {
+        min-height: 120px;
+        padding-top: $spacing-sm;
+        resize: vertical;
+      }
+      
+      select {
+        cursor: pointer;
+        padding-right: $spacing-xl;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237a0910' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 15px center;
+        background-size: 16px;
+        appearance: none; // remove seta padrão
+      }
+    }
+    
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+      cursor: pointer;
+      
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-top: 3px;
+        cursor: pointer;
+        accent-color: $primary-color;
+      }
+      
+      label {
+        font-family: $font-secondary;
+        font-size: 0.9rem;
+        color: $text-dark;
+        line-height: 1.4;
+        cursor: pointer;
+        
+        a {
+          color: $primary-color;
+          font-weight: 600;
+          text-decoration: underline;
+          
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+    
+    .form-submit {
+      @include button-primary;
+      width: 100%;
+      justify-content: center;
+      padding: 1.1rem 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: $border-radius-md;
+      transition: all 0.3s ease;
+      
+      i {
+        margin-right: 8px;
+        font-size: 0.95rem;
+      }
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(122, 9, 16, 0.25);
+      }
+    }
   }
 }
 
