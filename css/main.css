@@ -4412,6 +4412,7 @@ img {
   }
   .s-1 .hero-content {
     max-width: 900px;
+    margin: 0 auto;
   }
   .s-1 .hero-content h1 {
     font-size: 3.5rem;
@@ -4465,6 +4466,7 @@ img {
   .s-1 .hero-content {
     max-width: 700px;
     padding: 0 2rem;
+    margin: 0 auto;
   }
   .s-1 .hero-content h1 {
     font-size: 2.75rem;
