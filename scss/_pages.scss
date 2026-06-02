@@ -790,6 +790,10 @@
   background: $bg-light;
   
   .formulario-info {
+    @media (min-width: 1025px) {
+      padding-right: 4rem; // Margem de respiro no desktop
+    }
+
     h2 {
       @include title-primary;
       font-size: $font-size-3xl;

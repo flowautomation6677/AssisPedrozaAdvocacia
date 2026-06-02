@@ -2877,6 +2877,11 @@ body {
 .formulario-contato {
   background: rgb(252, 252, 252);
 }
+@media (min-width: 1025px) {
+  .formulario-contato .formulario-info {
+    padding-right: 4rem;
+  }
+}
 .formulario-contato .formulario-info h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
