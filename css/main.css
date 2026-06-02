@@ -4405,6 +4405,26 @@ img {
     appearance: none;
   }
 }
+.s-1 .hero-ctas .btn-primary {
+  background: rgb(227, 27, 41);
+  color: white;
+  border: 2px solid rgb(227, 27, 41);
+}
+.s-1 .hero-ctas .btn-primary:hover {
+  background: rgb(122, 9, 16);
+  border-color: rgb(122, 9, 16);
+  transform: translateY(-2px);
+}
+.s-1 .hero-ctas .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+.s-1 .hero-ctas .btn-secondary:hover {
+  background: white;
+  color: rgb(122, 9, 16);
+  transform: translateY(-2px);
+}
 @media (min-width: 1025px) {
   .s-1 {
     min-height: 80vh;
