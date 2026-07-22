@@ -50,6 +50,8 @@
   right: 0;
   z-index: $z-fixed;
   transition: all $transition-normal;
+  transform: translateY(-100%);
+  animation: slideDown 0.5s ease-out forwards;
   
   &.scrolled {
     box-shadow: $shadow-lg;
@@ -239,11 +241,6 @@ body {
 }
 
 // Animação de entrada do header
-.header {
-  transform: translateY(-100%);
-  animation: slideDown 0.5s ease-out forwards;
-}
-
 @keyframes slideDown {
   to {
     transform: translateY(0);
